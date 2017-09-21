@@ -1,0 +1,49 @@
+{
+  "name": "finicky",
+  "version": "1.0.0",
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
+  "description": "delete property of an object",
+  "homepage": "http://github.com/coderaiser/finicky",
+  "main": "lib/finicky.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/finicky.git"
+  },
+  "keywords": [
+    "object",
+    "value",
+    "property"
+  ],
+  "scripts": {
+    "test": "tape test/*.js",
+    "watcher": "nodemon -w test -w lib --exec",
+    "watch:test": "npm run watcher -- npm test",
+    "lint": "eslint lib test",
+    "build": "redrun clean init 6to5 legacy:* build:*",
+    "build:client": "webpack --progress",
+    "wisdom": "npm run build",
+    "jscs-fix": "npm run jscs --fix",
+    "init": "mkdirp dist legacy",
+    "clean": "rimraf legacy dist",
+    "coverage": "nyc npm test",
+    "report": "nyc report --reporter=text-lcov | coveralls",
+    "6to5": "babel lib -d legacy/lib",
+    "legacy:index": "echo \"module.exports = require('./lib/finicky');\" > legacy/index.js"
+  },
+  "dependencies": {},
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.6.0",
+    "coveralls": "^2.11.9",
+    "eslint": "^4.0.0",
+    "mkdirp": "^0.5.1",
+    "nodemon": "^1.11.0",
+    "nyc": "^11.0.2",
+    "redrun": "^5.0.1",
+    "tape": "^4.5.1",
+    "webpack": "^3.6.0"
+  }
+}
