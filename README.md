@@ -62,11 +62,11 @@ MIT
 
 [NPMIMGURL]:                https://img.shields.io/npm/v/finicky.svg?style=flat
 [BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/finicky/master.svg?style=flat
-[DependencyStatusIMGURL]:   https://img.shields.io/gemnasium/coderaiser/finicky.svg?style=flat
+[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/finicky.svg?style=flat
 [LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
 [NPMURL]:                   https://npmjs.org/package/finicky "npm"
 [BuildStatusURL]:           https://travis-ci.org/coderaiser/finicky  "Build Status"
-[DependencyStatusURL]:      https://gemnasium.com/coderaiser/finicky "Dependency Status"
+[DependencyStatusURL]:      https://david-dm.org/coderaiser/finicky "Dependency Status"
 [LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
 
 [CoverageURL]:              https://coveralls.io/github/coderaiser/finicky?branch=master
