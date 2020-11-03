@@ -13,41 +13,29 @@ const finicky = require('finicky');
 
 finicky('hello.world', {
     hello: {
-        world: {
-            'could be used in browser as well'
-        }
+        world: 'could be used in browser as well'
     }
 });
 // returns
-{
+({
     hello: {
     }
-}
+})
 
 finicky('work-with-divider', '-', {
     work: {
         with: {
-            divider: {
-                'could use divider as well'
-            }
+            divider: 'could use divider as well'
         }
     }
 });
 // returns
-{
+({
     work: {
         with: {
         }
     }
-}
-```
-
-## Environments
-
-In old `node.js` environments that not fully supports `es2015`, `finicky` could be used with:
-
-```js
-var finicky = require('finicky/legacy');
+})
 ```
 
 ## Related

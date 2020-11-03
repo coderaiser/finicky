@@ -1,7 +1,7 @@
 package-lock.json
 node_modules
 npm-debug.log
-legacy
 webpack*
 .nyc_output
-
+yarn-error.log
+.putoutcache

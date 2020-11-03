@@ -15,19 +15,23 @@
     "property"
   ],
   "scripts": {
-    "test": "tape test/*.js",
-    "watcher": "nodemon -w test -w lib --exec",
-    "watch:test": "npm run watcher -- npm test",
-    "lint": "eslint lib test",
-    "clean": "rimraf legacy dist",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls"
+    "test": "madrun test",
+    "watcher": "madrun watcher",
+    "watch:test": "madrun watch:test",
+    "lint": "madrun lint",
+    "clean": "madrun clean",
+    "coverage": "madrun coverage",
+    "report": "madrun report"
+  },
+  "engines": {
+    "node": ">=4"
   },
   "dependencies": {},
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^3.0.0",
     "eslint": "^7.12.1",
+    "madrun": "^7.0.4",
     "nodemon": "^2.0.6",
     "nyc": "^15.1.0"
   }
