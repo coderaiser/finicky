@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('tape');
+const test = require('supertape');
 const finicky = require('..');
 
 test('arguments: no', (t) => {
@@ -18,13 +18,13 @@ test('arguments: no obj', (t) => {
 test('result: remove value from object', (t) => {
     const obj = {
         hello: {
-            world: 'something'
-        }
+            world: 'something',
+        },
     };
     
     const actual = finicky('hello.world', obj);
     const expected = {
-        hello: {}
+        hello: {},
     };
     
     t.deepEqual(actual, expected, 'should remove property from object');
@@ -34,13 +34,13 @@ test('result: remove value from object', (t) => {
 test('result: remove value from object: copy', (t) => {
     const obj = {
         hello: {
-            world: 'something'
-        }
+            world: 'something',
+        },
     };
     
     const actual = finicky('hello.world', obj);
     const expected = {
-        hello: {}
+        hello: {},
     };
     
     t.notEqual(actual, expected, 'should not modify original object');
@@ -57,8 +57,8 @@ test('result: missing value from empty object', (t) => {
 test('result: missing value from object', (t) => {
     const obj = {
         some: {
-            value: 'hi'
-        }
+            value: 'hi',
+        },
     };
     const actual = finicky('hello.world', obj);
     
@@ -69,8 +69,8 @@ test('result: missing value from object', (t) => {
 test('result: missing value from object: copy', (t) => {
     const obj = {
         some: {
-            value: 'hi'
-        }
+            value: 'hi',
+        },
     };
     const actual = finicky('hello.world', obj);
     
@@ -80,7 +80,7 @@ test('result: missing value from object: copy', (t) => {
 
 test('result: value is an object', (t) => {
     const obj = {
-        hello: {}
+        hello: {},
     };
     
     const actual = finicky('hello', obj);
@@ -92,13 +92,13 @@ test('result: value is an object', (t) => {
 test('divider', (t) => {
     const obj = {
         hello: {
-            world: 'something'
-        }
+            world: 'something',
+        },
     };
     
     const expected = {
         hello: {
-        }
+        },
     };
     
     const actual = finicky('hello-world', '-', obj);
@@ -110,14 +110,14 @@ test('divider', (t) => {
 test('finicky: name with "_"', (t) => {
     const obj = {
         hello: {
-            world_min: 'something'
-        }
+            world_min: 'something',
+        },
     };
     
     const actual = finicky('hello_world_min', '_', obj);
     const expected = {
         hello: {
-        }
+        },
     };
     
     t.deepEqual(actual, expected, 'should delete property from object');
@@ -128,15 +128,15 @@ test('finicky: name with "_": similar', (t) => {
     const obj = {
         hello: {
             world: 'hello',
-            world_min: 'something'
-        }
+            world_min: 'something',
+        },
     };
     
     const actual = finicky('hello_world_min', '_', obj);
     const expected = {
         hello: {
             world: 'hello',
-        }
+        },
     };
     
     t.deepEqual(actual, expected, 'should remove property');

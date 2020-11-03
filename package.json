@@ -19,20 +19,25 @@
     "watcher": "madrun watcher",
     "watch:test": "madrun watch:test",
     "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
     "clean": "madrun clean",
     "coverage": "madrun coverage",
     "report": "madrun report"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
   "dependencies": {},
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^3.0.0",
     "eslint": "^7.12.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-putout": "^6.0.0",
     "madrun": "^7.0.4",
     "nodemon": "^2.0.6",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "putout": "^11.0.2",
+    "supertape": "^2.0.1"
   }
 }
